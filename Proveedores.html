@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Constructiva</title>
+    <title>Administración de Proveedores - Constructiva</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,10 +16,41 @@
             <li><a href="#">Cerrar Sesión</a></li>
         </nav>
     </header>
-    <section class="home">
-        <div class="home_content">
 
+    <!-- Modal para agregar proveedor -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Proveedor</h2>
+            <form id="supplierForm">
+                <label for="supplierName">Nombre:</label>
+                <input type="text" id="supplierName" name="supplierName" required>
+                <label for="supplierAddress">Dirección:</label>
+                <input type="text" id="supplierAddress" name="supplierAddress" required>
+                <label for="supplierPhone">Teléfono:</label>
+                <input type="text" id="supplierPhone" name="supplierPhone" required>
+                <button type="submit">Agregar</button>
+            </form>
         </div>
-    </section>
+    </div>
+
+    <button id="addSupplierButton" class="add-button">Agregar Proveedor</button>
+
+    <table id="supplierTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí se agregarán las filas de la tabla dinámicamente con JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="Proveedores.js"></script>
 </body>
+
 </html>
