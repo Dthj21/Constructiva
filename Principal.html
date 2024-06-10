@@ -5,100 +5,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Constructiva</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header class="header">
-        <a href="Principal.html" class="logo">Constructiva.</a>
-        <nav class="navbar">
-            <li><a href="#">Categorías</a>
-            <ul class="menu-vertical">
-                <li><a href="#">Herramientas</a></li>
-                <li><a href="#">Pinturas</a></li>
-                <li><a href="#">Materiales</a></li>
-                <li><a href="#">Decoración</a></li>
-            </ul>
-        </li>
-            <li><a href="User_Registrer.html">Iniciar Sesión / Registrate</a></li>
-            <li><a href="Login_Employee.html">¿Eres empleado?</a></li>
-        </nav>
-
-
-        <div>
-            <ul>
-                <li class="submenu">
-                    <img src="Iconos\carrito-de-compras (1).png" id="img-carrito" alt="">
-                    <div id="carrito">
-                        <table id="lista-carrito">
-                            <thead>
-                                <tr>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Precio</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                        <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
-                    </div>
-                </li>
-            </ul>
+    <header data-bs-theme="dark">
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <strong>Constructiva.</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarHeader">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Catálogo</a>
+                        </li>
+                        <li class="nav-item" id="login-nav-item">
+                            <a href="Iniciar_sesion.html" class="nav-link">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item" id="user-nav-item" style="display: none;">
+                            <span class="nav-link" id="user-name"></span>
+                        </li>
+                        <li class="nav-item" id="logout-nav-item" style="display: none;">
+                            <a href="#" class="nav-link" id="logout-link">Cerrar Sesión</a>
+                        </li>
+                    </ul>
+                    <a href="Carrito.html" class="btn btn-primary">Carrito<span id="carrito-contador"
+                            class="badge bg-secondary">0</span></a>
+                </div>
+            </div>
         </div>
     </header>
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Buscar...">
-        <button id="searchButton">Buscar</button>
-    </div>
-
-
     <div class="slider-box">
         <ul>
             <li>
-                <img src="Iconos\man-carrying-box-medium-shot.jpg" alt="">
+                <img src="Iconos/man-carrying-box-medium-shot.jpg" alt="">
                 <div class="texto">
                     <h2>Pregúntanos</h2>
-                    <p>
-                        Estamos para ayudarte en cada una de tus dudas, uno de nosotros te puede asesorar.
-                    </p>
+                    <p>Estamos para ayudarte en cada una de tus dudas, uno de nosotros te puede asesorar.</p>
                 </div>
             </li>
-
             <li>
-                <img src="Iconos\man-working-cutting-mdf-board.jpg" alt="">
+                <img src="Iconos/man-working-cutting-mdf-board.jpg" alt="">
                 <div class="texto">
-                    <h2>Consige las mejores herramientas con nosotros</h2>
-                    <p>
-                        A un buen precio y de buena calidad
-                    </p>
+                    <h2>Consigue las mejores herramientas con nosotros</h2>
+                    <p>A un buen precio y de buena calidad</p>
                 </div>
             </li>
-
             <li>
-                <img src="Iconos\roselyn-tirado-cqAX2wlK-Yw-unsplash.jpg" alt="">
+                <img src="Iconos/roselyn-tirado-cqAX2wlK-Yw-unsplash.jpg" alt="">
                 <div class="texto">
                     <h2>Pinturas para el hogar</h2>
-                    <p>
-                        Haz de tu hogar, uno calido para tu familia con las pinturas que te ofrecemos
-                    </p>
+                    <p>Haz de tu hogar, uno cálido para tu familia con las pinturas que te ofrecemos</p>
                 </div>
             </li>
-
-            
             <li>
-                <img src="Iconos\ivan-henao-2DK-CP_WAuw-unsplash.jpg" alt="">
+                <img src="Iconos/ivan-henao-2DK-CP_WAuw-unsplash.jpg" alt="">
                 <div class="texto">
                     <h2>Todo para construir tu casa</h2>
-                    <p>
-                        Ven y conoce las promociones que tenemos para ti!
-                    </p>
+                    <p>¡Ven y conoce las promociones que tenemos para ti!</p>
                 </div>
             </li>
         </ul>
-
     </div>
+    <main>
+        <div class="container">
+            <div id="productos-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <!-- Productos se cargarán aquí dinámicamente -->
+            </div>
+        </div>
+    </main>
+    <script src="js/productos.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userNavItem = document.getElementById('user-nav-item');
+            const userNameSpan = document.getElementById('user-name');
+            const loginNavItem = document.getElementById('login-nav-item');
+            const logoutNavItem = document.getElementById('logout-nav-item');
+            const logoutLink = document.getElementById('logout-link');
+            const username = localStorage.getItem('username');
+
+            if (username) {
+                userNameSpan.textContent = `Hola, ${username}`;
+                userNavItem.style.display = 'block';
+                loginNavItem.style.display = 'none';
+                logoutNavItem.style.display = 'block';
+            } else {
+                userNavItem.style.display = 'none';
+                loginNavItem.style.display = 'block';
+                logoutNavItem.style.display = 'none';
+            }
+
+            logoutLink.addEventListener('click', () => {
+                localStorage.removeItem('token');
+                localStorage.removeItem('username');
+                window.location.href = 'Principal.html';
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -147,7 +147,7 @@ body{
     margin: 100px auto;
     position: relative;
     overflow: hidden;
-    padding-top: 5%;
+    padding-top: 0;
 }
 
 .slider-box ul {
@@ -455,4 +455,43 @@ th {
 h2 {
     color: #FFC500;
     text-align: center;
+}
+
+main>.container {
+    padding: 30px 0;
+}
+
+/*Imagenes del principal*/
+.card {
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Ajusta la altura según tu preferencia */
+    object-fit: contain; /* Ajustar la imagen dentro del contenedor sin distorsionarla */
+}
+
+.card-body {
+    padding: 1; /* Eliminar el relleno para evitar espacios innecesarios */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.total-text {
+    color: white;
 }

@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header class="header">
         <a href="Principal.html" class="logo">Constructiva.</a>
         <nav class="navbar">
-            <li><a href="#">Cerrar Sesión</a></li>
         </nav>
     </header>
     <section class="form-register">
         <h4>Registro</h4>
-        <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese sus nombres">
-        <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingrese sus apellidos ">
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
-        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
-        <p>Estoy de acuerdo con<a href="#"> Términos y Condiciones</a></p>
-        <input class="btn-register" type="submit" value="Registrase">
-        <p><a href="#">¿Ya tengo cuenta?</a></p>
+        <form class="register-form">
+            <input class="controls" type="text" name="Username" id="Username" placeholder="Username">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+            <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+            <p>Estoy de acuerdo con<a href="#"> Términos y Condiciones</a></p>
+            <input class="btn-register" type="submit" value="Registrarse">
+        </form>
+        <p class="registration-message" style="display: none;">Usuario registrado con éxito</p>
+        <p><a href="Iniciar_sesion.html">¿Ya tengo cuenta?</a></p>
     </section>
     
-    <script src="register.js"></script>
+    <script src="../js/registro.js"></script>
 </body>
 </html>
-
